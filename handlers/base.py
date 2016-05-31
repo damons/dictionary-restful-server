@@ -29,6 +29,16 @@ class BaseHandler(Resource):
         return {"status": "Correc'"}
 
 
+class IEMLRequiredHandler(BaseHandler):
+    def __init__(self):
+        super().__init__()
+        self.reqparse.add_argument("ieml", required=True, type=str)
+
+    def do_request_parsing(self):
+        super().do_request_parsing()
+        self.ieml = self.args["ieml"]
+
+
 class BaseDataHandler(BaseHandler):
     def __init__(self):
         """The constructor for this abstract class just creates a request_parser"""

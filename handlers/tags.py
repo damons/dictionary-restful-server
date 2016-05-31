@@ -23,3 +23,4 @@ class AddAnnotationHandler(BaseHandler):
         self.reqparse.add_argument("annotation", required=True, type=str)
         pass
 
+
