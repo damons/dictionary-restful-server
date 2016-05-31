@@ -4,6 +4,14 @@ from flask_restful import Resource, reqparse
 import traceback
 
 
+def needs_token(post_function):
+    """Simple decorator that's supposed to be used on handler post functions requiring a token"""
+    def wrapper(*args, **kwargs):
+        # TODO : implement the user checking
+        return post_function(*args, **kwargs)
+    return wrapper
+
+
 class BaseHandler(Resource):
     """This is the base abstract handler, instantiates a request parser,
     and simplifies a couple of operations"""
