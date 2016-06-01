@@ -15,3 +15,11 @@ class DBConnector(object, metaclass=Singleton):
         self.db_term = self.client[DB_NAME_TERMS]
 
         self.terms = self.db_term[TERMS_COLLECTION]
+
+
+class UsersQueries(DBConnector):
+    """Simple connector for user logins and token check"""
+
+    def __init__(self):
+        super().__init__()
+        pass
