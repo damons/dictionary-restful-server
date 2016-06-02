@@ -6,12 +6,18 @@ class BaseSearchTermsHandler(BaseHandler):
 
 
 class SearchENHandler(BaseSearchTermsHandler):
-    pass
+
+    def post(self, term_id):
+        pass
 
 
 class SearchFRHandler(BaseSearchTermsHandler):
-    pass
+
+    def post(self, term_id):
+        pass
 
 
 class SearchIEMLHandler(BaseSearchTermsHandler):
-    pass
+
+    def post(self, term_id):
+        pass

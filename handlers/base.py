@@ -3,6 +3,8 @@ import json
 from flask_restful import Resource, reqparse
 import traceback
 
+from models.terms import TermsQueries
+
 
 def needs_token(post_function):
     """Simple decorator that's supposed to be used on handler post functions requiring a token"""
@@ -20,6 +22,7 @@ class BaseHandler(Resource):
         """The constructor for this abstract class just creates a request_parser"""
         super().__init__()
         self.reqparse = reqparse.RequestParser()
+        self.terms_db = TermsQueries()
         self.args = None
 
     def do_request_parsing(self):

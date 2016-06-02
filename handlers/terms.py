@@ -1,13 +1,22 @@
 from .base import BaseHandler, IEMLRequiredHandler, BaseDataHandler
 
 
-class NewIEMLTermHandler(BaseHandler):
+class BaseTermDataHandler(BaseHandler):
+
+    def __init__(self):
+        super().__init__()
+        for field in ["IEML", "FR", "EN", "CANONICAL", "LAYER", "CLASS", "TAILLE", "CANONICAL"]:
+            self.reqparse.add_argument(field, type=str, location="json")
+
+
+class NewIEMLTermHandler(BaseTermDataHandler):
 
     def post(self):
-        pass
+        self.do_request_parsing()
+        # TODO : implement the term saving
 
 
-class UpdateIEMLTermHandler(BaseHandler):
+class UpdateIEMLTermHandler(BaseTermDataHandler):
 
     def post(self):
         pass
@@ -15,11 +24,11 @@ class UpdateIEMLTermHandler(BaseHandler):
 
 class RemoveIEMLTermHandler(BaseHandler):
 
-    def post(self):
+    def post(self, term_id):
         pass
 
 
 class GetAllIEMLTermsHandler(BaseHandler):
 
     def post(self):
-        pass
+        return self.terms_db.get_all_terms()
