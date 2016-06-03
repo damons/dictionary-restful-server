@@ -2,6 +2,7 @@ from .base import BaseHandler, IEMLRequiredHandler, BaseDataHandler
 
 
 class BaseTermDataHandler(BaseHandler):
+    """Base handlers for all request that send an IEML term's data for deleting or updating"""
 
     def __init__(self):
         super().__init__()
@@ -19,6 +20,15 @@ class NewIEMLTermHandler(BaseTermDataHandler):
 class UpdateIEMLTermHandler(BaseTermDataHandler):
 
     def post(self):
+        # first we need to check what's being changed
+        # same_ieml = is the old ieml == new ieml
+        # same_paradigm = old paradigm flag == new paradigm flag
+
+        # if not(same_ieml and same_paradigm) we delete the relations for the old IEML
+
+        # then we update the term's document
+
+        # if not(same_ieml and same_paradigm), we update the relations and
         pass
 
 

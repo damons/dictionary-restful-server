@@ -5,7 +5,7 @@ import traceback
 
 from models.terms import TermsQueries
 
-
+3
 def needs_token(post_function):
     """Simple decorator that's supposed to be used on handler post functions requiring a token"""
     def wrapper(*args, **kwargs):

@@ -28,9 +28,9 @@ api.add_resource(UpdateIEMLTermHandler, '/api/updateieml') # requires login
 api.add_resource(RemoveIEMLTermHandler, '/api/remieml/<term_id>') # requires login
 
 ### search handlers
-api.add_resource(SearchIEMLHandler, '/api/exists/ieml/<term_id>')
-api.add_resource(SearchFRHandler, '/api/exists/FR/<term_id>')
-api.add_resource(SearchENHandler, '/api/exists/EN/<term_id>')
+api.add_resource(SearchIEMLHandler, '/api/exists/ieml/<term_ieml>')
+api.add_resource(SearchFRHandler, '/api/exists/FR/<term_fr>')
+api.add_resource(SearchENHandler, '/api/exists/EN/<term_en>')
 
 
 if __name__ == '__main__':
