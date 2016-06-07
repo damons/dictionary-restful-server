@@ -14,3 +14,11 @@ target/
 
 # idea files
 .idea
+
+# Pyvenv virtual environment
+lib64
+lib/
+pyvenv.cfg
+.python-version
+include/
+bin/
