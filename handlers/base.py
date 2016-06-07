@@ -1,11 +1,8 @@
 import json
-
-from flask_restful import Resource, reqparse
 import traceback
-
+from flask_restful import Resource, reqparse
 from models.terms import TermsQueries
 
-3
 def needs_token(post_function):
     """Simple decorator that's supposed to be used on handler post functions requiring a token"""
     def wrapper(*args, **kwargs):
