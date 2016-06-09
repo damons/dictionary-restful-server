@@ -1,0 +1,199 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  version: "0.0.0"
+  title: IEML Dictionary
+
+# Describe your paths here
+paths:
+  # This is a path endpoint. Change it.
+  /api/allieml:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        Returns a list of all the `IEML term` objects.
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: ArrayOfTerms
+            type: array
+            items:
+              title: Term
+              type: object
+              properties:
+                name:
+                  type: string
+                single:
+                  type: boolean
+                  
+  /client/authenticate:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        Not yet implemented
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          
+################################################################################
+#                 Relations editing and listing endpoints                      #
+################################################################################
+
+  /api/getRelVisibility:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          
+                  
+  /api/addRelVisibility:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+                  
+  /api/remRelVisibility:
+     # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Successful response
+                  
+  /api/toggleRelVisibility:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Successful response
+                  
+  /api/rels:
+     # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Successful response
+                  
+################################################################################
+#                         IEML edition endpoints                               #
+################################################################################
+                  
+  /api/newieml:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          
+                
+  /api/updateieml:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+                  
+  /api/remieml/<term_id>:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+
+################################################################################
+#                              Search Handlers                                 #
+################################################################################
+
+  /api/exists/ieml/<term_ieml>:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+              
+  /api/exists/FR/<term_fr>:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+
+  /api/exists/EN/<term_en>:
+    # This is a HTTP operation
+    post:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        TODO
+      responses:
+        # Response code
+        200:
+          description: Successful response
+
+
+
+
+
+
+
+
+
+
+
+
+
